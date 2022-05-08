@@ -123,37 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &510148589
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 510148590}
-  m_Layer: 0
-  m_Name: jectObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &510148590
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510148589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51228267, y: -0.9292274, z: 0.04262065}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +228,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1254774892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254774886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b004ab363ac8d4eb37c741319b153e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circleTarget: {fileID: 1254774886}
+  center: {x: 0, y: 0, z: 0}
+  size: {x: 10, y: 5, z: 0}
 --- !u!1001 &2052792499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,11 +256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722088177949787765, guid: 7d382a65001430f4c8c29a58f54e5bea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.472222
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 5722088177949787765, guid: 7d382a65001430f4c8c29a58f54e5bea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7020202
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5722088177949787765, guid: 7d382a65001430f4c8c29a58f54e5bea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -313,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 5957392528069871947, guid: 7d382a65001430f4c8c29a58f54e5bea, type: 3}
       propertyPath: m_Name
       value: Circle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957392528069871947, guid: 7d382a65001430f4c8c29a58f54e5bea, type: 3}
+      propertyPath: m_TagString
+      value: TargetCircle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d382a65001430f4c8c29a58f54e5bea, type: 3}
