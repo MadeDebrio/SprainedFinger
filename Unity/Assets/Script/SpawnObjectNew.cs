@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnObjectNew : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class SpawnObjectNew : MonoBehaviour
 
     public Vector3 center;
     public Vector3 size;
+
+    private float time;
+    public float destroyDelay;
 
     // Update is called once per frame
     void Update()
@@ -19,7 +23,7 @@ public class SpawnObjectNew : MonoBehaviour
 
         if(hit.collider != null)
         {
-            if(hit.collider.tag == "TargetCircle")
+            if (hit.collider.tag == "TargetCircle")
             {
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -27,6 +31,7 @@ public class SpawnObjectNew : MonoBehaviour
                 }
             }
         }
+        hideObject(Time.deltaTime);
     }
     public void SpawnNextCircle()
     {
@@ -34,6 +39,19 @@ public class SpawnObjectNew : MonoBehaviour
                                            Random.Range(-size.y / 2, size.y / 2), 0);
         Instantiate(circleTarget, pos, Quaternion.identity);
 
+        ScoreScript.scoreValue += 2;
         Destroy(gameObject);
+    }
+    private void hideObject(float deltaTime)
+    {
+        if (time < destroyDelay)
+        {
+            time += deltaTime;
+        }
+        else
+        {
+            time = 0;
+            SpawnNextCircle();
+        }
     }
 }
