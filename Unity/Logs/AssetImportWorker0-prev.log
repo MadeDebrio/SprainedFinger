@@ -16,11 +16,7 @@ D:/PROJECT_SPRAINEDFINGER/SprainedFinger_Project
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
-<<<<<<< HEAD
 51310
-=======
-64516
->>>>>>> parent of 306e8a7 (Update Background)
 Successfully changed project path to: D:/DEBRIO/UNITY/SprainedFinger
 D:/DEBRIO/UNITY/SprainedFinger
 =======
@@ -58,14 +54,10 @@ D:/PROJECT_SPRAINEDFINGER/SprainedFinger_Project
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 <<<<<<< HEAD
-<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 134.79 ms, found 4 plugins.
 =======
 Refreshing native plugins compatible for Editor in 106.61 ms, found 4 plugins.
 >>>>>>> origin/scoring
-=======
-Refreshing native plugins compatible for Editor in 135.17 ms, found 4 plugins.
->>>>>>> parent of 306e8a7 (Update Background)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.2f1 (d6360bedb9a0)
 [Subsystems] Discovering subsystems at path D:/UNITY EDITOR/2021.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -82,20 +74,19 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56660
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004999 seconds.
+Registered in 0.004668 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 137.33 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 135.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
+- Completed reload, in  0.849 seconds
 Domain Reload Profiling:
-<<<<<<< HEAD
 	ReloadAssembly (850ms)
 		BeginReloadAssembly (79ms)
 =======
@@ -118,34 +109,24 @@ Domain Reload Profiling:
 	ReloadAssembly (911ms)
 		BeginReloadAssembly (85ms)
 >>>>>>> origin/scoring
-=======
-	ReloadAssembly (845ms)
-		BeginReloadAssembly (81ms)
->>>>>>> parent of 306e8a7 (Update Background)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 <<<<<<< HEAD
-<<<<<<< HEAD
 		EndReloadAssembly (641ms)
 			LoadAssemblies (78ms)
-=======
-		EndReloadAssembly (634ms)
-			LoadAssemblies (80ms)
->>>>>>> parent of 306e8a7 (Update Background)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (136ms)
+			SetupTypeCache (139ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (400ms)
+			SetupLoadedEditorAssemblies (403ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (70ms)
+				InitializePlatformSupportModulesInManaged (71ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (137ms)
+				RefreshPlugins (136ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-<<<<<<< HEAD
 				ProcessInitializeOnLoadAttributes (133ms)
 				ProcessInitializeOnLoadMethodAttributes (61ms)
 =======
@@ -164,10 +145,6 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (170ms)
 				ProcessInitializeOnLoadMethodAttributes (57ms)
 >>>>>>> origin/scoring
-=======
-				ProcessInitializeOnLoadAttributes (130ms)
-				ProcessInitializeOnLoadMethodAttributes (60ms)
->>>>>>> parent of 306e8a7 (Update Background)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -175,31 +152,22 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 <<<<<<< HEAD
-<<<<<<< HEAD
 Registered in 0.005456 seconds.
 =======
 Registered in 0.014031 seconds.
 >>>>>>> origin/scoring
-=======
-Registered in 0.005464 seconds.
->>>>>>> parent of 306e8a7 (Update Background)
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\PROJECT_SPRAINEDFINGER\SprainedFinger_Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image D:\PROJECT_SPRAINEDFINGER\SprainedFinger_Project\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 <<<<<<< HEAD
-<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 132.91 ms, found 4 plugins.
-=======
-Refreshing native plugins compatible for Editor in 134.08 ms, found 4 plugins.
->>>>>>> parent of 306e8a7 (Update Background)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 Package Manager log level set to [2]
-- Completed reload, in  1.597 seconds
+- Completed reload, in  1.602 seconds
 Domain Reload Profiling:
-<<<<<<< HEAD
 	ReloadAssembly (1603ms)
 		BeginReloadAssembly (232ms)
 =======
@@ -212,26 +180,17 @@ Domain Reload Profiling:
 	ReloadAssembly (1828ms)
 		BeginReloadAssembly (265ms)
 >>>>>>> origin/scoring
-=======
-	ReloadAssembly (1598ms)
-		BeginReloadAssembly (231ms)
->>>>>>> parent of 306e8a7 (Update Background)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 <<<<<<< HEAD
-<<<<<<< HEAD
 			CreateAndSetChildDomain (123ms)
-=======
-			CreateAndSetChildDomain (121ms)
->>>>>>> parent of 306e8a7 (Update Background)
 		EndReloadAssembly (1224ms)
-			LoadAssemblies (94ms)
+			LoadAssemblies (90ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (320ms)
+			SetupTypeCache (318ms)
 			ReleaseScriptCaches (1ms)
-<<<<<<< HEAD
 			RebuildScriptCaches (74ms)
 			SetupLoadedEditorAssemblies (669ms)
 =======
@@ -244,14 +203,9 @@ Domain Reload Profiling:
 			RebuildScriptCaches (140ms)
 			SetupLoadedEditorAssemblies (589ms)
 >>>>>>> origin/scoring
-=======
-			RebuildScriptCaches (76ms)
-			SetupLoadedEditorAssemblies (663ms)
->>>>>>> parent of 306e8a7 (Update Background)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-<<<<<<< HEAD
 <<<<<<< HEAD
 				RefreshPlugins (133ms)
 				BeforeProcessingInitializeOnLoad (138ms)
@@ -263,12 +217,6 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (286ms)
 				ProcessInitializeOnLoadMethodAttributes (45ms)
 >>>>>>> origin/scoring
-=======
-				RefreshPlugins (134ms)
-				BeforeProcessingInitializeOnLoad (139ms)
-				ProcessInitializeOnLoadAttributes (317ms)
-				ProcessInitializeOnLoadMethodAttributes (53ms)
->>>>>>> parent of 306e8a7 (Update Background)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -276,7 +224,6 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-<<<<<<< HEAD
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
 <<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
@@ -293,15 +240,6 @@ Unloading 62 unused Assets / (226.4 KB). Loaded Objects now: 4790.
 Memory consumption went from 161.9 MB to 161.7 MB.
 Total: 3.127300 ms (FindLiveObjects: 0.337100 ms CreateObjectMapping: 0.297800 ms MarkObjects: 2.337500 ms  DeleteObjects: 0.153800 ms)
 >>>>>>> origin/scoring
-=======
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.90 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4320 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (225.6 KB). Loaded Objects now: 4756.
-Memory consumption went from 160.9 MB to 160.7 MB.
-Total: 4.222600 ms (FindLiveObjects: 0.412500 ms CreateObjectMapping: 0.405300 ms MarkObjects: 3.220100 ms  DeleteObjects: 0.183600 ms)
->>>>>>> parent of 306e8a7 (Update Background)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -315,7 +253,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-<<<<<<< HEAD
 <<<<<<< HEAD
   Time since last request: 21539.365141 seconds.
   path: Assets/Script/SceneLoader1.cs
@@ -1876,15 +1813,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-=======
-  Time since last request: 20994.706113 seconds.
-  path: Assets/Script/SpawnerObject.cs
-  artifactKey: Guid(34c92f34200ba4f4ea142d5d2c95a834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/SpawnerObject.cs using Guid(34c92f34200ba4f4ea142d5d2c95a834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8187db57137c5c4bf0acbe7c5f023ef3') in 0.021185 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.889429 seconds.
-  path: Assets/Script/SpawnerObjectCRA.cs
-  artifactKey: Guid(7761d37be211a9e478c9625c45d0a85f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/SpawnerObjectCRA.cs using Guid(7761d37be211a9e478c9625c45d0a85f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2e880dbbf600d38e7d9a0e5542f2de') in 0.001048 seconds 
->>>>>>> parent of 306e8a7 (Update Background)
