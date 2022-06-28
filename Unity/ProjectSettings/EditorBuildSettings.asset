@@ -12,14 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayMode.unity
     guid: f6483a76bea0a6b4baf242e3439843fd
   - enabled: 1
-    path: Assets/Scenes/Campaign.unity
-    guid: f81c5adc1cd85ba49a544b41b5d1399b
+    path: Assets/Scenes/SelectTheme 1.unity
+    guid: 84e81b8bef00b2b4eac53e277af068b1
   - enabled: 1
     path: Assets/Scenes/CrazzyMode.unity
     guid: 84d2cb49a2e12684ca099279e58b6313
-  - enabled: 1
-    path: Assets/Scenes/SelectTheme.unity
-    guid: e668e22188f90de4395b2ba9c87ffe5d
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 776e63b5ba7fca64aa76da97800594cc, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 608ee2c2baf3d244a995ae6954b7ff72, type: 2}
