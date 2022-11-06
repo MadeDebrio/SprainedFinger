@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     
@@ -13,13 +14,15 @@ public class GameManager : MonoBehaviour
     //public GameObject cirle;   
     public SpawnObjectNew spawnScript;
     public Slider slider;
+    //public PlayfabManager playfabManager;
+    public Leaderboard playfabLeaderboard;
 
     private void Awake()
     {
         slider.value = 0.5f;
         Time.timeScale = 1;
         ScoreScript.scoreValue = 0;
-
+       
     }
 
     public void PauseControl()
@@ -43,11 +46,15 @@ public class GameManager : MonoBehaviour
     {
         //Gameover
         if (spawnScript.isLose())
-        {            
+        {
             Time.timeScale = 0;
+            
+            //setting screen
             Gameover.SetActive(true);           
             if (Input.GetMouseButtonDown(0))
-            {               
+            {
+                playfabLeaderboard.SendLeaderboard(ScoreScript.scoreValue);
+                //playfabManager.SendLeaderboard(ScoreScript.scoreValue);
                 SceneManager.LoadScene(0);
             }
         }     

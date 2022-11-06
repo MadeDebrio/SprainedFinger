@@ -19,8 +19,8 @@ public class SpawnObjectNew : MonoBehaviour
     private SpriteRenderer visible;
 
     public MusicManager SFX;
-
     
+
     private void Start()
     {
         visible = GetComponent<SpriteRenderer>();
