@@ -4,13 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
+
 //using PlayFab.Json;
 //using Newtonsoft.Json;
 using TMPro;
 
 public class PlayfabManager : MonoBehaviour
 {
-    private void Awake()
+    public sceneLoader scene;
+    
+    
+
+private void Awake()
     {
         //DontDestroyOnLoad(this.gameObject); 
     }
@@ -18,25 +23,26 @@ public class PlayfabManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Login();
+        //Login();
     }
 
     // Update is called once per frame
 
-    void Login()
-    {
-        var request = new LoginWithCustomIDRequest
-        {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
-            CreateAccount = true
-        };
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnErrorShared);
-    }
+    //void Login()
+    //{
+    //    var request = new LoginWithCustomIDRequest
+    //    {
+    //        CustomId = SystemInfo.deviceUniqueIdentifier,
+    //        CreateAccount = true
+    //    };
+    //    PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnErrorShared);
+    //}
 
     void OnLoginSuccess(LoginResult result)
     {
-        //messageText.text = "Logged in!";
-        Debug.Log("Succesfull Login/Account Created");
+        messageText.text = "Logged in!";
+        Debug.Log("Succesfull Login");
+        scene.MainMenu();
     }
 
     private static void OnErrorShared(PlayFabError error)
@@ -89,7 +95,7 @@ public class PlayfabManager : MonoBehaviour
     //    Debug.Log((string)messageValue);
     //}
 
-    
+
 
     //void GetLeaderboard()
     //{
@@ -110,67 +116,75 @@ public class PlayfabManager : MonoBehaviour
     //}
 
     //********************************************************LOGIN REGISTER*************************************************
-    //[Header("UI")]
-    //public Text messageText;
-    //public TMP_InputField usernameInput;
-    //public TMP_InputField emailInput;
-    //public TMP_InputField passwordInput;
-    //public Button SUBMIT;
-    //public void RegisterButton()
-    //{
-    //    if (passwordInput.text.Length < 6)
-    //    {
-    //        messageText.text = "Password too short!";
-    //        return;
-    //    }
-    //    var request = new RegisterPlayFabUserRequest
-    //    {
-    //        Email = emailInput.text,
-    //        Password = passwordInput.text,
-    //        RequireBothUsernameAndEmail = false
+    [Header("UI")]
+    public Text messageText;
+    public TMP_InputField usernameInput;
+    public TMP_InputField emailInput;
+    public TMP_InputField passwordInput;
+    public Button SUBMIT;
+    public void RegisterButton()
+    {
+        if (passwordInput.text.Length < 6)
+        {
+            messageText.text = "Password too short!";
+            return;
+        }
+        var request = new RegisterPlayFabUserRequest
+        {
+            Email = emailInput.text,
+            Username = usernameInput.text,
+            DisplayName = usernameInput.text,
+            Password = passwordInput.text,
+            RequireBothUsernameAndEmail = false
 
-    //    };
-    //    PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
-    //}
+        };
+        
+        PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
+    }
 
-    //void OnRegisterSuccess(RegisterPlayFabUserResult result)
-    //{
-    //    messageText.text = "Registered and Logged in";
-    //}
-    //void OnError(PlayFabError error)
-    //{
-    //    messageText.text = error.ErrorMessage;
-    //    Debug.Log(error.GenerateErrorReport());
-    //}
+    void OnRegisterSuccess(RegisterPlayFabUserResult result)
+    {
+        messageText.text = "Registered and Logged in";
+    }
+    void OnError(PlayFabError error)
+    {
+        messageText.text = error.ErrorMessage;
+        Debug.Log(error.GenerateErrorReport());
+    }
 
-    //public void LoginButton()
-    //{        
-    //    var request = new LoginWithEmailAddressRequest{
-    //        Email = emailInput.text,
-    //        Password = passwordInput.text,        
-    //    };
-    //    PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
-    //}
+    public void LoginButton()
+    {
+        var request = new LoginWithEmailAddressRequest
+        {
+            Email = emailInput.text,
+            Password = Encrypt.Encrypts(passwordInput.text), 
+            
+        };
+        Debug.Log(Encrypt.Encrypts(passwordInput.text));
+        Debug.Log(Encrypt.Decrypt(passwordInput.text));
+        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+        
+    }
 
-    //public void ResetPasswordButton()
-    //{
-    //    if (passwordInput.text.Length < 6)
-    //    {
-    //        messageText.text = "Password too short!";
-    //        return;
-    //    }
-    //    var request = new SendAccountRecoveryEmailRequest
-    //    {
-    //        Email = emailInput.text,
-    //        TitleId = "B6279"
-    //    };
-    //    PlayFabClientAPI.SendAccountRecoveryEmail(request, OnPasswordReset, OnError);
-    //}
+    public void ResetPasswordButton()
+    {
+        if (passwordInput.text.Length < 6)
+        {
+            messageText.text = "Password too short!";
+            return;
+        }
+        var request = new SendAccountRecoveryEmailRequest
+        {
+            Email = emailInput.text,
+            TitleId = "B6279"
+        };
+        PlayFabClientAPI.SendAccountRecoveryEmail(request, OnPasswordReset, OnError);
+    }
 
-    //void OnPasswordReset(SendAccountRecoveryEmailResult result)
-    //{
-    //    messageText.text = "Password reset mail sent!";
-    //}
+    void OnPasswordReset(SendAccountRecoveryEmailResult result)
+    {
+        messageText.text = "Password reset mail sent!";
+    }
 
 }
 

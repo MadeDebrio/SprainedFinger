@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CrazzyMode.unity
     guid: 84d2cb49a2e12684ca099279e58b6313
+  - enabled: 1
+    path: Assets/Scenes/USERLOGIN.unity
+    guid: 803ed217259f7b746b865e973a41ca7d
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 776e63b5ba7fca64aa76da97800594cc, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 608ee2c2baf3d244a995ae6954b7ff72, type: 2}
