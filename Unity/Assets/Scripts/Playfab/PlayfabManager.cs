@@ -134,7 +134,7 @@ private void Awake()
             Email = emailInput.text,
             Username = usernameInput.text,
             DisplayName = usernameInput.text,
-            Password = passwordInput.text,
+            Password = Encrypt.Encrypts(passwordInput.text),
             RequireBothUsernameAndEmail = false
 
         };
@@ -161,7 +161,7 @@ private void Awake()
             
         };
         Debug.Log(Encrypt.Encrypts(passwordInput.text));
-        Debug.Log(Encrypt.Decrypt(passwordInput.text));
+        //Debug.Log(Encrypt.Decrypt(passwordInput.text));
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
         
     }

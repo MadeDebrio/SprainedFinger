@@ -7,7 +7,7 @@ using System.Text;
 
 public class Encrypt : MonoBehaviour
 {
-	static string hash = "123@abc";
+	static string hash = "123456@abc";
 
 	public static string Encrypts(string input)
 	{
@@ -19,7 +19,7 @@ public class Encrypt : MonoBehaviour
 			{
 				ICryptoTransform tr = trip.CreateEncryptor();
 				byte[] result = tr.TransformFinalBlock(data, 0, data.Length);
-				return Convert.ToBase64String(result, 0, result.Length-1);
+				return Convert.ToBase64String(result, 0, result.Length);
 			}
 		}
 	}
