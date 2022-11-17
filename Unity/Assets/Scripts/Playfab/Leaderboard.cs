@@ -5,13 +5,19 @@ using PlayFab.Json;
 using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class Leaderboard : MonoBehaviour
 {
+    public GameObject rowPrefab;
+    public Transform rowsParent;
+    public static string loggedInPlayfabId;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetLeaderboardAroundPlayer();
     }
 
     // Update is called once per frame
@@ -60,9 +66,50 @@ public class Leaderboard : MonoBehaviour
 
     void OnLeaderboardGet(GetLeaderboardResult result)
     {
+          
+
         foreach (var item in result.Leaderboard)
         {
-            Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
+            GameObject newGo = Instantiate(rowPrefab, rowsParent);
+            TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
+            texts[0].text = (item.Position + 1).ToString();
+            texts[1].text = item.DisplayName;
+            texts[2].text = item.StatValue.ToString();
+            Debug.Log(string.Format("PLACE : {0}| ID:{1}| VALUE:{2}",
+                item.Position, item.PlayFabId, item.StatValue+1.ToString()));
+        }
+    }
+    void GetLeaderboardAroundPlayer()
+    {
+        var request = new GetLeaderboardAroundPlayerRequest
+        {
+            StatisticName = "Platform Score",
+            MaxResultsCount = 10
+        };
+        PlayFabClientAPI.GetLeaderboardAroundPlayer(request, OnLeaderboardAroundPlayerGet, OnErrorShared);
+    }
+
+    void OnLeaderboardAroundPlayerGet(GetLeaderboardAroundPlayerResult result)
+    {
+
+
+        foreach (var item in result.Leaderboard)
+        {
+            GameObject newGo = Instantiate(rowPrefab, rowsParent);
+            TMP_Text[] texts = newGo.GetComponentsInChildren<TMP_Text>();
+            texts[0].text = (item.Position + 1).ToString();
+            texts[1].text = item.DisplayName;
+            texts[2].text = item.StatValue.ToString();
+            Debug.Log(string.Format("PLACE : {0}| ID:{1}| VALUE:{2}",
+                item.Position, item.PlayFabId, item.StatValue + 1.ToString()));
+
+            if (loggedInPlayfabId == item.PlayFabId)
+            {
+                texts[0].color = Color.cyan;
+                texts[1].color = Color.cyan;
+                texts[2].color = Color.cyan;
+            }
         }
     }
 }
+

@@ -930,6 +930,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15c4b27742d17345a0ccdff6a06a1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: {fileID: 0}
+  messageText: {fileID: 0}
+  usernameInput: {fileID: 0}
+  emailInput: {fileID: 0}
+  passwordInput: {fileID: 0}
+  SUBMIT: {fileID: 0}
 --- !u!4 &556551831
 Transform:
   m_ObjectHideFlags: 0
@@ -952,11 +958,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556551829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c74340aa4d4bd9449de3fac52357f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rowPrefab: {fileID: 0}
+  rowsParent: {fileID: 0}
 --- !u!1 &778036942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,7 +2136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

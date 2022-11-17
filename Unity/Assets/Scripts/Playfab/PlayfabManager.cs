@@ -40,6 +40,7 @@ private void Awake()
 
     void OnLoginSuccess(LoginResult result)
     {
+        Leaderboard.loggedInPlayfabId = result.PlayFabId;
         messageText.text = "Logged in!";
         Debug.Log("Succesfull Login");
         scene.MainMenu();
@@ -134,7 +135,7 @@ private void Awake()
             Email = emailInput.text,
             Username = usernameInput.text,
             DisplayName = usernameInput.text,
-            Password = Encrypt.Encrypts(passwordInput.text),
+            Password = passwordInput.text,
             RequireBothUsernameAndEmail = false
 
         };
@@ -157,11 +158,10 @@ private void Awake()
         var request = new LoginWithEmailAddressRequest
         {
             Email = emailInput.text,
-            Password = Encrypt.Encrypts(passwordInput.text), 
+            Password = passwordInput.text, 
             
         };
-        Debug.Log(Encrypt.Encrypts(passwordInput.text));
-        //Debug.Log(Encrypt.Decrypt(passwordInput.text));
+       
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
         
     }
