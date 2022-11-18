@@ -12,16 +12,27 @@ public class sceneLoader : MonoBehaviour
 
     public void CrazzyMode()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("CrazzyMode");
     }
 
     public void Campaign()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Campaign");
     }
+
+    public void Multiplayer()
+    {
+        SceneManager.LoadScene("Multiplayer");
+    }
+
+    public void LoadingScene()
+    {
+        SceneManager.LoadScene("LOADING");
+    }
+
     public void PlayMode()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("PlayMode");
     }
     public void Back()
     {
@@ -30,7 +41,7 @@ public class sceneLoader : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()

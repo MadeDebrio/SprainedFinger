@@ -1843,6 +1843,7 @@ GameObject:
   - component: {fileID: 547413275}
   - component: {fileID: 547413274}
   - component: {fileID: 547413273}
+  - component: {fileID: 547413278}
   - component: {fileID: 547413277}
   m_Layer: 5
   m_Name: LOGIN
@@ -1957,6 +1958,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8345bb20c518245847bb8d11efc61a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &547413278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547413271}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1834a33d6bb5cbf4b97febc3c35817b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nickName: 
 --- !u!1 &669666668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +3671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

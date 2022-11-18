@@ -12,7 +12,7 @@ using TMPro;
 public class PlayfabManager : MonoBehaviour
 {
     public sceneLoader scene;
-    
+    public string displayName;
     
 
 private void Awake()
@@ -159,7 +159,7 @@ private void Awake()
         {
             Email = emailInput.text,
             Password = passwordInput.text, 
-            
+           
         };
        
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
@@ -184,6 +184,14 @@ private void Awake()
     void OnPasswordReset(SendAccountRecoveryEmailResult result)
     {
         messageText.text = "Password reset mail sent!";
+    }
+    public void SetDisplayName(string name)
+    {
+       displayName=name;
+    }
+    public string GetDisplayName()
+    {
+        return displayName;
     }
 
 }

@@ -7,6 +7,7 @@ using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.UI;
 using TMPro;
+using SprainedFinger;
 
 
 public class Leaderboard : MonoBehaviour
@@ -14,9 +15,11 @@ public class Leaderboard : MonoBehaviour
     public GameObject rowPrefab;
     public Transform rowsParent;
     public static string loggedInPlayfabId;
+   
+
     // Start is called before the first frame update
     void Start()
-    {
+    {       
         GetLeaderboardAroundPlayer();
     }
 
@@ -79,7 +82,7 @@ public class Leaderboard : MonoBehaviour
                 item.Position, item.PlayFabId, item.StatValue+1.ToString()));
         }
     }
-    void GetLeaderboardAroundPlayer()
+    public void GetLeaderboardAroundPlayer()
     {
         var request = new GetLeaderboardAroundPlayerRequest
         {
@@ -104,12 +107,14 @@ public class Leaderboard : MonoBehaviour
                 item.Position, item.PlayFabId, item.StatValue + 1.ToString()));
 
             if (loggedInPlayfabId == item.PlayFabId)
-            {
+            {                
+                SprainedFinger.PhotonConnector.nickName = item.DisplayName;
                 texts[0].color = Color.cyan;
                 texts[1].color = Color.cyan;
                 texts[2].color = Color.cyan;
             }
         }
     }
+    
 }
 
