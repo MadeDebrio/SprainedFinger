@@ -7,19 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class JoinLobby : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    private byte maxPlayers = 2;
-
     public void Start()
     {
         StartCoroutine(FoundMatch());
     }
 
     private void CreateRoom()
-    {
-        //RoomOptions roomOptions = new RoomOptions();
-        //roomOptions.MaxPlayers = maxPlayers;
-        //PhotonNetwork.CreateRoom(null, roomOptions, null);
+    {        
         int randomRoomName = Random.Range(0, 5000);
         RoomOptions roomOptions = new RoomOptions() {
             IsVisible = true,
@@ -47,10 +41,7 @@ public class JoinLobby : MonoBehaviourPunCallbacks
         // joined a room successfully
         Debug.Log("You have connected to a Photon Lobby");
         Debug.Log("Invoking get Playfab friends");
-        Debug.Log("Room Name : "+ PhotonNetwork.CurrentRoom.Name);
-        //PhotonConnector.GetPhotonFriends?.Invoke();
-        //OnLobbyJoined?.Invoke();
-        //SceneManager.LoadScene("Multiplayer");
+        Debug.Log("Room Name : "+ PhotonNetwork.CurrentRoom.Name);        
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)

@@ -7,18 +7,14 @@ public class SpawnObjectNew : MonoBehaviour
 {
 
     public GameObject circleTarget;
-   
-
+    public MusicManager SFX;
+    public Slider slider;
     public Vector3 center;
     public Vector3 size;
-
-    private float time;
     public float destroyDelay;
 
-    public Slider slider;
-    private SpriteRenderer visible;
-
-    public MusicManager SFX;
+    private float time;    
+    private SpriteRenderer visible;   
     
 
     private void Start()
@@ -71,9 +67,11 @@ public class SpawnObjectNew : MonoBehaviour
     {
         Vector3 pos = center + new Vector3(Random.Range(-size.x / 2, size.x / 2),
                                            Random.Range(-size.y / 2, size.y / 2), 0);
+        Debug.Log("NewObject");
         Instantiate(circleTarget, pos, Quaternion.identity);        
         
         Destroy(gameObject);
+        Debug.Log("ObjectDestroyed");
     }
     private void hideObject(float deltaTime)
     {
