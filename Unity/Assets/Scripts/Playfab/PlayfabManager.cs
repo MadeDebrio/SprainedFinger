@@ -17,7 +17,7 @@ public class PlayfabManager : MonoBehaviour
 
 private void Awake()
     {
-        //DontDestroyOnLoad(this.gameObject); 
+        //DontDestroyOnLoad(this.gameObject);         
     }
 
     // Start is called before the first frame update
@@ -40,8 +40,7 @@ private void Awake()
 
     void OnLoginSuccess(LoginResult result)
     {
-        Leaderboard.loggedInPlayfabId = result.PlayFabId;
-        messageText.text = "Logged in!";
+        Leaderboard.loggedInPlayfabId = result.PlayFabId;        
         Debug.Log("Succesfull Login");
         scene.MainMenu();
     }
@@ -128,6 +127,7 @@ private void Awake()
         if (passwordInput.text.Length < 6)
         {
             messageText.text = "Password too short!";
+            messageText.enabled = true;
             return;
         }
         var request = new RegisterPlayFabUserRequest
@@ -145,11 +145,13 @@ private void Awake()
 
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
-        messageText.text = "Registered and Logged in";
+        messageText.text = "Registered!!!";
+        messageText.enabled = true;
     }
     void OnError(PlayFabError error)
     {
         messageText.text = error.ErrorMessage;
+        messageText.enabled=true;
         Debug.Log(error.GenerateErrorReport());
     }
 
@@ -171,6 +173,7 @@ private void Awake()
         if (passwordInput.text.Length < 6)
         {
             messageText.text = "Password too short!";
+            messageText.enabled = true;
             return;
         }
         var request = new SendAccountRecoveryEmailRequest
@@ -184,6 +187,7 @@ private void Awake()
     void OnPasswordReset(SendAccountRecoveryEmailResult result)
     {
         messageText.text = "Password reset mail sent!";
+        messageText.enabled = true;
     }
     public void SetDisplayName(string name)
     {
